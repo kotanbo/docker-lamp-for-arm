@@ -9,6 +9,10 @@ services:
       - ./src:/var/www/html
   db:
     build: ./infra/mysql
+    environment:
+      MYSQL_ROOT_HOST : '%'
+      MYSQL_ROOT_PASSWORD : password
+      TZ : Asia/Tokyo
     volumes:
       - db-store:/var/lib/mysql
 
