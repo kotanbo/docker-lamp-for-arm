@@ -11,7 +11,7 @@
 ## Requirement
 
 - Docker
-- Docker Compose
+- docker-compose
 
 ## Usage
 
