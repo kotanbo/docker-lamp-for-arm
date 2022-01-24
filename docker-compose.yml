@@ -15,6 +15,11 @@ services:
       TZ : Asia/Tokyo
     volumes:
       - db-store:/var/lib/mysql
+  mailcatcher:
+    build: ./infra/mailcatcher
+    ports:
+      - 1025:1025
+      - 1080:1080
 
 volumes:
   db-store:
