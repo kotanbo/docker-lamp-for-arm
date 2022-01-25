@@ -4,7 +4,6 @@ services:
     build: ./infra/php
     ports:
       - 80:80
-      - 9003:9003 # Xdebug
     volumes:
       - ./src:/var/www/html
   db:
