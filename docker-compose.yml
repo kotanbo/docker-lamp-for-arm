@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 services:
   web:
     build: ./infra/php
@@ -7,11 +7,11 @@ services:
     volumes:
       - ./src:/var/www/html
   db:
-    build: ./infra/mysql
+    build: ./infra/mariadb
     environment:
-      MYSQL_ROOT_HOST : '%'
-      MYSQL_ROOT_PASSWORD : password
-      TZ : Asia/Tokyo
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: password
+      TZ: Asia/Tokyo
     volumes:
       - db-store:/var/lib/mysql
   mailcatcher:
