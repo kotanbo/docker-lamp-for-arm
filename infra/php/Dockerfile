@@ -22,6 +22,8 @@ RUN apt-get update && \
 RUN pecl install xdebug-3.1.6 && \
   docker-php-ext-enable xdebug
 
+RUN composer global require "squizlabs/php_codesniffer=*"
+
 RUN a2enmod rewrite authz_groupfile
 
 COPY ./php.ini /usr/local/etc/php/php.ini
