@@ -1,4 +1,4 @@
-FROM php:7.4.33-apache
+FROM php:8.1.27-apache
 SHELL ["/bin/bash", "-oeux", "pipefail", "-c"]
 
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
@@ -19,7 +19,7 @@ RUN apt-get update && \
   docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && \
   docker-php-ext-install -j$(nproc) gd
 
-RUN pecl install xdebug-3.1.6 && \
+RUN pecl install xdebug-3.3.1 && \
   docker-php-ext-enable xdebug
 
 RUN composer global require "squizlabs/php_codesniffer=*"
